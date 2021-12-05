@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="stylesheet.css" >
+    </header>
+    <body>
+   <div class="container my-5" style="background-size:contain; background-image:url('https://twinstrust.org/static/785e19d4-ff7a-492c-bfe6aca392b35261/113316e9-067a-4817-a0d65b34ad3c0c04/800x1500_highestperformance_/calendar-background.jpg');">
+    
+    <div class="row">
+    <div class="col-6 col-md-3 mt-3"><img id="1" src="images/hatches/hatch1f.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="2" src="images/hatches/hatch2.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="3" src="images/hatches/hatch3-f.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="4" src="images/hatches/hatch4f.jpg" class="img-fluid" /></div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="5" data-target="#advent-modal" data-day="5" src="images/hatches/hatch5.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="6" data-target="#advent-modal" data-message="God Jul!" src="images/hatches/hatch6.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="7" data-target="#advent-modal" data-message="Bonne Noel!" src="images/hatches/hatch7.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="8" data-target="#advent-modal" data-message="Feliz Navidad!" src="images/hatches/hatch8.jpg" class="img-fluid" /></div>
+    </div>
+    </div> 
+   
+  
+    <!-- Modal -->
+    <div class="modal fade" id="advent-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">5 December</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    </body>
+</html>
+
+<script>
+    let today = new Date();
+    let dd = String(today.getDate());
+
+    class Greeting {
+        constructor(greeting, language){
+            this.greeting=greeting;
+            this.language=language;
+        }
+    }
+
+    $(".img-fluid").hover((e)=>{
+        (e.target.id==dd) ? $(e.target).addClass('open').attr('data-toggle','modal') :''; 
+    }); 
+    
+    $('#advent-modal').on('show.bs.modal', function (event) {
+        let hatch = $(event.relatedTarget) 
+        let day = parseInt(hatch.data('day'));
+    
+        var modal = $(this)
+        modal.find('.modal-title').text(greetings[day].greeting)
+        modal.find('.modal-body').text(greetings[day].language)
+    })
+   
+    let english = new Greeting('Merry Christmas', 'British');
+    let greetings = [english, english];
+
+    greetings.push(new Greeting('Gledelig Jul', 'Icelandic'));
+    greetings.push(new Greeting('God Jul', 'Norwegian'))
+    greetings.push(new Greeting('Happy Holidays', 'American'));
+    greetings.push(new Greeting('Feliz Navidad', 'Spanish'))
+    
+    
+</script>
+
