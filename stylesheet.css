@@ -1,5 +1,13 @@
+
+h1 {
+    font-family: 'Alegreya', serif;
+    font-family: 'Mountains of Christmas', cursive;
+    color: #1E792C;
+    text-align: center;
+}
 .open {
     opacity: 1;
+    cursor: pointer;
 }
 img {
     opacity: 0.6;

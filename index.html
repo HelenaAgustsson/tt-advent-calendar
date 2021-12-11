@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
+        <title>HA | Merry Christmas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@800;900&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="stylesheet.css" >
-    </header>
+    </head>
     <body>
+        <h1 class="p-4">Merry Christmas, Everybody!</h1>
    <div class="container my-5" style="background-size:contain; background-image:url('https://twinstrust.org/static/785e19d4-ff7a-492c-bfe6aca392b35261/113316e9-067a-4817-a0d65b34ad3c0c04/800x1500_highestperformance_/calendar-background.jpg');">
     
     <div class="row">
-    <div class="col-6 col-md-3 mt-3"><img id="1" src="images/hatches/hatch1f.jpg" class="img-fluid" /></div>
-    <div class="col-6 col-md-3 mt-3"><img id="2" src="images/hatches/hatch2.jpg" class="img-fluid" /></div>
-    <div class="col-6 col-md-3 mt-3"><img id="3" src="images/hatches/hatch3-f.jpg" class="img-fluid" /></div>
-    <div class="col-6 col-md-3 mt-3"><img id="4" src="images/hatches/hatch4f.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="1" data-target="#advent-modal" src="images/hatches/hatch1f.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="2" data-target="#advent-modal" src="images/hatches/hatch2.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="3" data-target="#advent-modal" src="images/hatches/hatch3-f.jpg" class="img-fluid" /></div>
+    <div class="col-6 col-md-3 mt-3"><img id="4" data-target="#advent-modal" src="images/hatches/hatch4f.jpg" class="img-fluid" /></div>
     </div>
     <div class="row pb-3">
-        <div class="col-6 col-md-3 mt-3"><img id="5" data-target="#advent-modal" data-day="5" src="images/hatches/hatch5.jpg" class="img-fluid" /></div>
-        <div class="col-6 col-md-3 mt-3"><img id="6" data-target="#advent-modal" data-message="God Jul!" src="images/hatches/hatch6.jpg" class="img-fluid" /></div>
-        <div class="col-6 col-md-3 mt-3"><img id="7" data-target="#advent-modal" data-message="Bonne Noel!" src="images/hatches/hatch7.png" class="img-fluid" /></div>
-        <div class="col-6 col-md-3 mt-3"><img id="8" data-target="#advent-modal" data-message="Feliz Navidad!" src="images/hatches/hatch8.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="5" data-target="#advent-modal" src="images/hatches/hatch5.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="6" data-target="#advent-modal" src="images/hatches/hatch6.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="7" data-target="#advent-modal" src="images/hatches/hatch7.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="8" data-target="#advent-modal" src="images/hatches/hatch8.jpg" class="img-fluid" /></div>
     </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="9" data-target="#advent-modal" src="images/hatches/hatch9.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="10" data-target="#advent-modal" src="images/hatches/hatch10.jpg" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="11" data-target="#advent-modal" src="images/hatches/hatch11.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="12" data-target="#advent-modal" src="images/hatches/hatch12.jpg" class="img-fluid" /></div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="13" data-target="#advent-modal" src="images/hatches/hatch13.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="14" data-target="#advent-modal" src="images/hatches/hatch14.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="15" data-target="#advent-modal" src="images/hatches/hatch15.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="16" data-target="#advent-modal" src="images/hatches/hatch16.png" class="img-fluid" /></div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="17" data-target="#advent-modal" src="images/hatches/hatch17.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="18" data-target="#advent-modal" src="images/hatches/hatch18.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="19" data-target="#advent-modal" src="images/hatches/hatch19.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="20" data-target="#advent-modal" src="images/hatches/hatch20.png" class="img-fluid" /></div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="21" data-target="#advent-modal" src="images/hatches/hatch21.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="22" data-target="#advent-modal" src="images/hatches/hatch22.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="23" data-target="#advent-modal" src="images/hatches/hatch23.png" class="img-fluid" /></div>
+        <div class="col-6 col-md-3 mt-3"><img id="24" data-target="#advent-modal" src="images/hatches/hatch24.png" class="img-fluid" /></div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-6 col-md-3 mt-3"><img id="25" data-target="#advent-modal" src="images/hatches/hatch25.png" class="img-fluid" /></div>
+        
+    </div>
+    
     </div> 
    
   
@@ -49,7 +83,7 @@
     let dd = String(today.getDate());
 
     class Greeting {
-        constructor(greeting, language){
+        constructor(language, greeting){
             this.greeting=greeting;
             this.language=language;
         }
@@ -61,20 +95,31 @@
     
     $('#advent-modal').on('show.bs.modal', function (event) {
         let hatch = $(event.relatedTarget) 
-        let day = parseInt(hatch.data('day'));
-    
+        let day = parseInt(hatch.attr('id'));
         var modal = $(this)
+    
         modal.find('.modal-title').text(greetings[day].greeting)
         modal.find('.modal-body').text(greetings[day].language)
     })
    
-    let english = new Greeting('Merry Christmas', 'British');
-    let greetings = [english, english];
-
-    greetings.push(new Greeting('Gledelig Jul', 'Icelandic'));
-    greetings.push(new Greeting('God Jul', 'Norwegian'))
-    greetings.push(new Greeting('Happy Holidays', 'American'));
-    greetings.push(new Greeting('Feliz Navidad', 'Spanish'))
+    let greetings = [];
+    let english = new Greeting('English', 'Merry Christmas');
+    let icelandic = new Greeting('Icelandic','Gleðileg jól!');
+    let norwegian = new Greeting('Norwegian','God Jul');
+    let american = new Greeting('American', 'Happy Holidays');
+    let spanish = new Greeting('Spanish','Feliz Navidad' );
+    let french = new Greeting('French','Joyeux Noël');
+    let czech = new Greeting('Czech','Veselé Vánoce!');
+    let finnish = new Greeting('Finnish','Hyvää Joulua!');
+    let german = new Greeting('German','Fröhliche Weihnachten!');
+    let hawaiian = new Greeting('Hawaiian','Mele Kalikimaka!');
+    let irish = new Greeting('Irish','Nollaig Shona Duit!');
+    let portuguese= new Greeting('Portuguese','Feliz Natal!');
+    let italian = new Greeting('Italian','Buan Natale!');
+    let polish = new Greeting('Polish', 'Wesołych Świąt');
+    let danish = new Greeting('Danish', 'Glædelig Jul!');
+    let welsh = new Greeting('Welsh', 'Nadolig Llawen');
+    greetings.push(english, american, icelandic, norwegian, spanish, french, czech, finnish, german, hawaiian, irish, portuguese, italian, polish, danish, welsh, icelandic, norwegian, french, spanish, welsh, italian, spanish, danish, english);
     
     
 </script>
